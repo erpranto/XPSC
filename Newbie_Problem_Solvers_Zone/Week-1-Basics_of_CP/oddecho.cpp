@@ -1,4 +1,4 @@
-//https://cses.fi/problemset/task/1083
+//https://open.kattis.com/problems/oddecho
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -9,19 +9,14 @@ int main()
     cin.tie(NULL);
     int n;
     cin >> n;
-    vector<int> v(n);
+    vector<string> v(n);
     for (int i = 0; i < n; i++)
     {
         cin >> v[i];
     }
-    sort(v.begin(), v.end());
-    for (int i = 0; i <= n; i++)
+    for (int i = 0; i < n; i += 2)
     {
-        if (v[i] != i)
-        {
-            cout << i << "\n";
-            break;
-        }
+        cout << v[i] << "\n";
     }
     return 0;
 }

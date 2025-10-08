@@ -1,4 +1,4 @@
-//https://atcoder.jp/contests/abc124/tasks/abc124_a?lang=en
+//https://open.kattis.com/problems/r2
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -7,8 +7,8 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int a, b;
-    cin >> a >> b;
-    cout << max({a + b, a + a - 1, b + b - 1}) << "\n";
+    int r, s;
+    cin >> r >> s;
+    cout << 2 * s - r << "\n";
     return 0;
 }

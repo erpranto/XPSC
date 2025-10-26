@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "e:/Phitron/Introduction To Basic Programming/XPSC/Newbie_Problem_Solvers_Zone/Week-04-(Two_Pointers,Prefix_Sum,Difference_Array&Fixed_Size_Sliding_Window)/Problemset",
+      "program": "e:/Phitron/Introduction To Basic Programming/XPSC/Newbie_Problem_Solvers_Zone/Week-04-(Two_Pointers,Prefix_Sum,Difference_Array&Fixed_Size_Sliding_Window)/Problemset/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,3 @@
-//https://codeforces.com/edu/course/2/lesson/9/1/practice/contest/307092/problem/B
-
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -13,29 +11,32 @@ using namespace std;
 #define N 500005
 ll fx[] = {0, 0, 1, -1, 1, 1, -1, -1};
 ll fy[] = {1, -1, 0, 0, -1, 1, -1, 1};
+
 int main()
 {
     FAST;
-    int n, m;
-    cin >> n >> m;
-    vector<int> a(n), b(m);
-    for (int i = 0; i < n; i++)
-        cin >> a[i];
-    for (int i = 0; i < m; i++)
-        cin >> b[i];
-
-    int l = 0, r = 0, cnt = 0;
-    while (r < m)
+    int tc = 1;
+    cin >> tc;
+    while (tc--)
     {
-        if (l < n && a[l] < b[r])
+        int n, k;
+        cin >> n >> k;
+        string s, t;
+        cin >> s >> t;
+        int s0 = 0, s1 = 0, t0 = 0, t1 = 0;
+        for (int i = 0; i < n; i++)
         {
-            cnt++, l++;
+            if (s[i] == '0')
+                s0++;
+            else
+                s1++;
+            if (t[i] == '0')
+                t0++;
+            else
+                t1++;
         }
-        else
-        {
-            cout << cnt << " ";
-            r++;
-        }
+        if (s0 == t0 && s1 == t1)
+            HA else NA
     }
     return 0;
 }

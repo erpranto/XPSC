@@ -1,3 +1,5 @@
+//https://codeforces.com/problemset/problem/1690/D
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -19,23 +21,27 @@ int main()
     cin >> tc;
     while (tc--)
     {
-        int n,k;
-        cin>>n>>k;
+        int n, k;
+        cin >> n >> k;
         string s;
-        cin>>s;
-        int cnt=0;
-        for(auto c:s){
-            if(c=='B')
-            cnt++;
+        cin >> s;
+        int cnt = 0;
+        for (int i = 0; i < k; i++)
+        {
+            if (s[i] == 'W')
+                cnt++;
         }
-        if(cnt==k){
-            cout<<0<<nl;
-            continue;
-        }
-        int i=0,j=0;
-        while(j<n){
+        int ans = cnt;
 
+        for (int i = k; i < n; i++)
+        {
+            if (s[i] == 'W')
+                cnt++;
+            if (s[i - k] == 'W')
+                cnt--;
+            ans = min(ans, cnt);
         }
+        cout << ans << nl;
     }
     return 0;
 }

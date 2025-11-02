@@ -1,4 +1,4 @@
-//https://codeforces.com/problemset/problem/1843/B
+//https://codeforces.com/problemset/problem/1873/D
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,32 +21,30 @@ int main()
     cin >> tc;
     while (tc--)
     {
-        int n;
-        cin >> n;
-        vector<int> v(n);
-        ll sum = 0;
-        for (int i = 0; i < n; i++)
+        int n, k;
+        cin >> n >> k;
+        string s;
+        cin >> s;
+        int cnt = 0;
+        for (int i = 0; i < k; i++)
         {
-            cin >> v[i];
-            sum += abs(v[i]);
+            if (s[i] == 'W')
+                cnt++;
         }
-        int idx = 0, move = 0;
-        while (idx < n)
+        int ans = 0;
+        for (int i = 0; i < n;)
         {
-            if (v[idx] < 0)
+            if (s[i] == 'B')
             {
-                while (idx < n && v[idx] <= 0)
-                {
-                    idx++;
-                }
-                move++;
+                ans++;
+                i += k;
             }
             else
             {
-                idx++;
+                i++;
             }
         }
-        cout << sum << " " << move << nl;
+        cout << ans << nl;
     }
     return 0;
 }

@@ -1,4 +1,4 @@
-//https://codeforces.com/problemset/problem/1843/B
+// https://codeforces.com/problemset/problem/1807/D
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,32 +21,24 @@ int main()
     cin >> tc;
     while (tc--)
     {
-        int n;
-        cin >> n;
-        vector<int> v(n);
-        ll sum = 0;
-        for (int i = 0; i < n; i++)
+        ll n, q;
+        cin >> n >> q;
+        vector<ll> v(n + 1), pref_sum(n + 1);
+        for (ll i = 1; i <= n; i++)
         {
             cin >> v[i];
-            sum += abs(v[i]);
+            pref_sum[i] = pref_sum[i - 1] + v[i];
         }
-        int idx = 0, move = 0;
-        while (idx < n)
+        while (q--)
         {
-            if (v[idx] < 0)
-            {
-                while (idx < n && v[idx] <= 0)
-                {
-                    idx++;
-                }
-                move++;
-            }
-            else
-            {
-                idx++;
-            }
+            ll l, r, k;
+            cin >> l >> r >> k;
+            ll total = pref_sum[n];
+            ll segment_sum = pref_sum[r] - pref_sum[l - 1];
+            ll new_sum = total - segment_sum + (r - l + 1) * k;
+            if (new_sum % 2 != 0)
+                HA else NA
         }
-        cout << sum << " " << move << nl;
     }
     return 0;
 }

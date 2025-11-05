@@ -51,6 +51,6 @@ int main()
         a[i] += c;
         cout << a[i] << " ";
     }
-    cout << endl;
+    cout << nl;
     return 0;
 }

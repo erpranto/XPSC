@@ -26,6 +26,8 @@ int main()
             cin >> a[i];
         for (int i = 0; i < m; i++)
             cin >> b[i];
+
+        
     }
     return 0;
 }

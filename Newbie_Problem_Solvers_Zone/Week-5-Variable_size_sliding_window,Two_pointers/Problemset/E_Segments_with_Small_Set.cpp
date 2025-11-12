@@ -1,3 +1,5 @@
+//https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/E
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -26,7 +28,28 @@ int main()
     {
         cin >> v[i];
     }
-    int l=0,r=0;
-    
+    ll l = 0, r = 0, ans = 0, sum = 0;
+    map<ll, ll> mp;
+    while (r < n)
+    {
+        if (mp[v[r]]==0)
+            sum++;
+        mp[v[r]]++;
+        if (sum > k)
+        {
+            while (sum > k)
+            {
+                mp[v[l]]--;
+                if (mp[v[l]] == 0)
+                {
+                    sum--;
+                }
+                l++;
+            }
+        }
+        ans += r - l + 1;
+        r++;
+    }
+    cout << ans << nl;
     return 0;
 }

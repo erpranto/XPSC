@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/Phitron/Introduction To Basic Programming/XPSC/Newbie_Problem_Solvers_Zone/Week-5-Variable_size_sliding_window,Two_pointers/Module-5",
-      "program": "e:/Phitron/Introduction To Basic Programming/XPSC/Newbie_Problem_Solvers_Zone/Week-5-Variable_size_sliding_window,Two_pointers/Module-5/build/Debug/outDebug",
+      "cwd": "d:/Phitron/Introduction To Basic Programming/XPSC/Newbie_Problem_Solvers_Zone/Week-5-Variable_size_sliding_window,Two_pointers/Module-5",
+      "program": "d:/Phitron/Introduction To Basic Programming/XPSC/Newbie_Problem_Solvers_Zone/Week-5-Variable_size_sliding_window,Two_pointers/Module-5/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

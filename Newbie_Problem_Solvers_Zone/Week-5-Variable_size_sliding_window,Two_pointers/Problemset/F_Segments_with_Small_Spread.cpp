@@ -1,4 +1,5 @@
-//https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/C
+//https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/F
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,37 +21,45 @@ ll fy[] = {1, -1, 0, 0, -1, 1, -1, 1};
 int main()
 {
     FAST;
-    ll n, k;
+    int n;
+    ll k;
     cin >> n >> k;
-    vector<int> a(n);
+    vector<ll> v(n);
     for (ll i = 0; i < n; i++)
     {
-        cin >> a[i];
+        cin >> v[i];
     }
-
-    ll l = 0, r = 0, ans = 0;
-    ll sum = 0;
+    ll l = 0, r = 0;
+    ll ans = 0;
+    multiset<ll> ml;
     while (r < n)
     {
-        sum += a[r];
-        if (sum <= k)
+        ml.insert(v[r]);
+        ll mn = *ml.begin(), mx = *ml.rbegin();
+        if (mx - mn <= k)
         {
             ans += (r - l + 1);
         }
         else
         {
-            while (sum > k && l < r)
+            while (l <= r)
             {
-                sum -= a[l];
+                mn = *ml.begin(), mx = *ml.rbegin();
+                if (mx - mn <= k)
+                {
+                    break;
+                }
+                ml.erase(ml.find(v[l]));
                 l++;
             }
-            if (sum <= k)
+            mn = *ml.begin(), mx = *ml.rbegin();
+            if (mx - mn <= k)
             {
-                ans += (r - l + 1); 
+                ans += (r - l + 1);
             }
         }
         r++;
     }
-    cout<<ans<<nl;
+    cout << ans << nl;
     return 0;
 }

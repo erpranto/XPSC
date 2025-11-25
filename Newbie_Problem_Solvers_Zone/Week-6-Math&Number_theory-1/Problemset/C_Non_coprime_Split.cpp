@@ -13,12 +13,13 @@ int main()
     {
         ll l, r;
         cin >> l >> r;
-        if (l == r && l % 2 != 0 && r % 2 != 0){
-
+        if (r < 4)
+        {
+            cout << -1 << nl;
+            continue;
         }
         else
         {
-            
         }
     }
     return 0;
